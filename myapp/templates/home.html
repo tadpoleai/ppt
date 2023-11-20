@@ -20,29 +20,25 @@
         crossorigin="anonymous"></script>
 </body>
 <div class="jumbotron">
-
-    <h1 class="display-4">Effortless Slides, <br>Impactful Stories</h1>
+    <h1 class="display-4" ><span data-i18n="effortlessSlides">Effortless Slides, </span> <br><span data-i18n="impactfulStories">Impactful Stories</span></h1>
     <span id="typed" class="lead"></span>
     <script>
-   var typed = new Typed('#typed', {
-    strings: ["Automate PowerPoint Creation<br> with the Power of AI GPT-3.5 Turbo"],
-    typeSpeed: 20, // Increase this for a slower typing speed
-    contentType: 'html'
-  });
-
-
-
+        var typed = new Typed('#typed', {
+            strings: ["Automate PowerPoint Creation<br> with the Power of AI GPT-3.5 Turbo"],
+            typeSpeed: 20, // Increase this for a slower typing speed
+            contentType: 'html'
+        });
     </script>
     <div id="try-now">
-        <a href="{{ url_for('generate') }}" class="btn btn-primary btn-lg mt-4">Try Now</a>
+        <a href="{{ url_for('generate') }}" class="btn btn-primary btn-lg mt-4" data-i18n="tryNow">Try Now</a>
     </div>
     <div id="how-it-works">
-        <a href="#instructions">>How to Use?</a>
+        <a href="#instructions"  data-i18n="howToUse">>How to Use?</a>
     </div>
 </div>
 <div class="description">
     <div class="des-title">
-        <h4>Your work becomes faster</h4>
+        <h4 data-i18n="fastWork">Your work becomes faster</h4>
         <img id="rocket" src="./static/img/rocket.png">
     </div>
     <div class="row">
@@ -50,8 +46,8 @@
             <div class="card">
                 <div class="card-body">
                     <img id="content-creation" src="./static/img/content-creation.png">
-                    <h5 class="card-title">Efficient content creation</h5>
-                    <p class="card-text">With the use of advanced AI, your PowerPoint presentations are generated
+                    <h5 class="card-title" data-i18n="efficientContentCreation">Efficient content creation</h5>
+                    <p class="card-text" data-i18n="cardtext1">With the use of advanced AI, your PowerPoint presentations are generated
                         with ease. Simply provide your desired content, and our application will handle the structuring
                         and
                         summarization for each slide. Say goodbye to the stress of manually creating slide content and
@@ -64,8 +60,8 @@
             <div class="card">
                 <div class="card-body">
                     <img id="user" src="./static/img/user.png">
-                    <h5 class="card-title">Smooth User Experience</h5>
-                    <p class="card-text">Everything you need to generate a PowerPoint presentation is readily available.
+                    <h5 class="card-title" data-i18n="smoothUserExperience">Smooth User Experience</h5>
+                    <p class="card-text" data-i18n="cardtext2">Everything you need to generate a PowerPoint presentation is readily available.
                         With a user-friendly interface, you can input your content, select your template, and generate
                         your presentation all in one place. The application reduces routine work, allowing you to focus
                         on the creative aspects of your presentation.</p>
@@ -76,8 +72,8 @@
             <div class="card">
                 <div class="card-body">
                     <img id="docs" src="./static/img/docs.png">
-                    <h5 class="card-title">Transform Complex Tasks into Simplicity</h5>
-                    <p class="card-text">Our PowerPoint generator takes the complexity out of creating a
+                    <h5 class="card-title" data-i18n="transformComplexTasksIntoSimplicity">Transform Complex Tasks into Simplicity</h5>
+                    <p class="card-text" data-i18n="cardtext3">Our PowerPoint generator takes the complexity out of creating a
                         well-structured presentation. It handles the challenging task of organizing your information
                         into clear, concise, and engaging slides. It accepts from long content like the docmentation
                         of your work to short description of your idea. No need to worry about information overload or
@@ -88,7 +84,7 @@
     </div>
 </div>
 <section id="instructions">
-    <h2>How To Use</h2>
+    <h2 data-i18n="useStep">How To Use</h2>
     <div class="slideshow-container">
         <div class="slide">
             <img src="./static/img/step1.png" alt="Step 1: ..."/>

@@ -16,7 +16,7 @@
         <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Log In</legend>
+                <legend class="border-bottom mb-4" data-i18n="logIn">Log In</legend>
                 <div class="form-group">
                     {{ form.email.label(class="form-control-label") }}
                     {% if form.email.errors %}
@@ -52,13 +52,13 @@
                 {{ form.submit(class="btn btn-outline-info") }}
             </div>
             <small class="text-muted ml-2">
-                    <a href="#">Forgot password?</a>
+                    <a href="#" data-i18n="forgotPassword">Forgot password?</a>
             </small>
         </form>
     </div>
     <div class="border-top pt-3">
         <small class="text-muted">
-            Need An Account? <a class="ml-2" href="{{ url_for('register') }}">Sign Up Now</a>
+            <span data-i18n="needAAccountn"></span> <a class="ml-2" href="{{ url_for('register') }}" data-i18n="signUpNow">Sign Up Now</a>
         </small>
     </div>
 {% endblock content %}

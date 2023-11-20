@@ -2,34 +2,34 @@
 {% block content %}
 <div class="generate-showcase">
     <form id="generate-form" method="POST" action="{{ url_for('generate') }}">
-        <label class="text-for-info" for="presentation_title">What is the title for the presentation?</label>
+        <label class="text-for-info" for="presentation_title" data-i18n="presentation">What is the title for the presentation?</label>
         <input type="text" id="presentation_title" name="presentation_title" required>
-        <label class="text-for-info" for="presenter_name">Presented by</label>
+        <label class="text-for-info" for="presenter_name" data-i18n="presentedy">Presented by</label>
         <input type="text" id="presenter_name" name="presenter_name" required>
-        <label class="text-for-info" for="number_of_slide">How many slides do you need?</label>
+        <label class="text-for-info" for="number_of_slide" data-i18n="howManySlidesDoYouNeed">How many slides do you need?</label>
         <input type="number" id="number_of_slide" name="number_of_slide" required>
 
-        <label id="enter-your-content" for="user_text">Enter your content</label>
+        <label id="enter-your-content" for="user_text" data-i18n="enterYourContent">Enter your content</label>
         <textarea id="user_text" name="user_text" required></textarea>
 
         <div class="form-check">
             <input class="form-check-input" type="checkbox" id="insert_image" name="insert_image">
-            <label class="form-check-label" for="insert_image">
+            <label class="form-check-label" for="insert_image" data-i18n="insertImageAutomatically">
                 Insert image automatically (this might insert irrelevant information)
             </label>
         </div>
 
         <div class="template-choice text-for-info">
-            Choose a template:
+            <span data-i18n="chooseTemplate">Choose a template:</span>
             <input type="radio" id="simple" name="template_choice" value="simple">
-            <label for="simple">Simple</label>
+            <label for="simple" data-i18n="simple">Simple</label>
             <input type="radio" id="bright_modern" name="template_choice" value="bright_modern">
-            <label for="bright_modern">Bright Modern</label>
+            <label for="bright_modern" data-i18n="brightModern">Bright Modern</label>
             <input type="radio" id="dark_modern" name="template_choice" value="dark_modern">
-            <label for="dark_modern">Dark Modern</label>
+            <label for="dark_modern" data-i18n="darkModern">Dark Modern</label>
         </div>
 
-        <button id="generate-button" class="btn btn-primary" type="submit">Generate your presentation!</button>
+        <button id="generate-button" class="btn btn-primary" type="submit" data-i18n="generatePresentation">Generate your presentation!</button>
     </form>
     <!-- Modal -->
     <div class="modal" id="modal-generate">
@@ -38,10 +38,10 @@
               <div id="holder"></div>
               <div id="loading-indicator">
                 <div class="spinner"></div>
-                <p>Generating your presentation...</p>
+                <p data-i18n="generatingPresentationLoading">Generating your presentation...</p>
               </div>
               <div class="generated-header">
-                <div class="generated-header"><a href="{{ url_for('download_file', filename='generated_presentation.pptx') }}">Click to Download</a></div>
+                <div class="generated-header"><a href="{{ url_for('download_file', filename='generated_presentation.pptx') }}" data-i18n="download">Click to Download</a></div>
               </div>
           </div>
         </div>

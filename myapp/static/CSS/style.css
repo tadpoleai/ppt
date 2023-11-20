@@ -153,19 +153,20 @@ body .container.custom-main {
     height: 60px;
     display: flex;
     align-items: center;
-    padding-top: 30px;
+    gap: 10px;
 }
 
 .des-title h4{
     margin: 0px;
+    width: fit-content;
     font-size: 30px;
+    line-height: 60px;
 }
 
 #rocket {
     height: 60px;
     width: 60px;
     margin: 0px;
-    padding-bottom: 10px;
 }
 
 #user {
@@ -599,4 +600,7 @@ pre {
     color: white;
 }
 
+.lang {
+    padding-right: 16px;
+}
 
